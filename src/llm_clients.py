@@ -30,6 +30,12 @@ from typing import Dict, Iterable, List, Mapping, MutableMapping, Optional
 
 import requests
 
+# Temporarily suppress SSL verification errors in local environments where
+# self-signed certificates are used.  The requests issued by this module are
+# configured to skip certificate validation until the deployment provides
+# trusted certificates.
+requests.packages.urllib3.disable_warnings()  # type: ignore[attr-defined]
+
 
 class LLMConfigurationError(RuntimeError):
     """Raised when an LLM call cannot be prepared due to misconfiguration."""
@@ -181,7 +187,13 @@ class AzureChatClient:
         if "max_tokens" in kwargs:
             payload["max_tokens"] = kwargs["max_tokens"]
 
-        response = requests.post(url, headers=headers, json=payload, timeout=60)
+        response = requests.post(
+            url,
+            headers=headers,
+            json=payload,
+            timeout=60,
+            verify=False,
+        )
         if response.status_code >= 400:
             raise RuntimeError(
                 f"Model request failed ({response.status_code}): {response.text}"

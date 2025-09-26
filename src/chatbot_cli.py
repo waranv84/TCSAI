@@ -1,17 +1,70 @@
-"""Command-line interface for the interactive policy renewal chatbot."""
 from __future__ import annotations
 
 import argparse
 from pathlib import Path
-from typing import Dict
+from typing import Dict, List, Optional
 
-from policy_chatbot import PolicyKnowledgeBase, PolicyRenewalChatbot
+from llm_clients import (
+    AzureChatClient,
+    LLMCapabilityError,
+    LLMConfigurationError,
+    find_model_config,
+)
+from policy_chatbot import ChatResponse, PolicyKnowledgeBase, PolicyRenewalChatbot
 from policy_renewal_agent import Customer, PolicyRenewalAgent
+
+
+DEFAULT_MODEL_ID = "azure/genailab-maas-gpt-4o"
 
 
 def _load_customers(agent: PolicyRenewalAgent, dataset_path: Path) -> Dict[str, Customer]:
     customers = agent.load_customers(dataset_path)
     return {customer.customer_id: customer for customer in customers}
+
+
+def _system_prompt(customer: Customer) -> str:
+    return (
+        "You are an empathetic insurance policy renewal assistant. Blend the provided "
+        "customer profile, knowledge base insights, and recommended outreach messaging "
+        "to deliver clear, concise answers. Always reference relevant benefits, renewal "
+        "steps, or incentives that encourage the customer to renew while keeping a warm, "
+        "supportive tone."
+    )
+
+
+def _compose_intro_prompt(customer: Customer, intro: ChatResponse) -> str:
+    details = [
+        f"Customer name: {customer.name}",
+        f"Segment: {customer.segment}",
+        f"Policy type: {customer.policy_type}",
+        f"Premium: ${customer.premium:,.2f}",
+        f"Renewal date: {customer.renewal_date}",
+        "Craft a welcoming opening message that summarises why renewing is valuable and offers help with next steps.",
+        "Use the reference outreach message to stay aligned with the recommended tone.",
+        f"Reference outreach message:\n{intro.text}",
+    ]
+    return "\n".join(details)
+
+
+def _compose_llm_user_message(
+    customer: Customer,
+    question: str,
+    base_response: ChatResponse,
+) -> str:
+    context_lines = [
+        f"Customer: {customer.name}",
+        f"Segment: {customer.segment}",
+        f"Policy: {customer.policy_type}",
+        f"Premium: ${customer.premium:,.2f}",
+        f"Renewal date: {customer.renewal_date}",
+        f"Customer question: {question}",
+        "Incorporate the structured suggestions below into a natural, conversational reply that directly answers the question.",
+        f"Rule-based assistant guidance:\n{base_response.text}",
+    ]
+    if base_response.suggested_prompts:
+        prompts = "\n".join(f"- {prompt}" for prompt in base_response.suggested_prompts)
+        context_lines.append("Potential follow-up topics to optionally mention:\n" + prompts)
+    return "\n".join(context_lines)
 
 
 def interactive_session() -> None:
@@ -55,23 +108,70 @@ def interactive_session() -> None:
 
     customer = customers[customer_id]
     chatbot = PolicyRenewalChatbot(agent, knowledge_base)
-    intro_response = chatbot.intro(customer)
-    print("\n" + intro_response.text + "\n")
-    if intro_response.suggested_prompts:
-        print("Try asking:")
-        for prompt in intro_response.suggested_prompts:
-            print(f"  - {prompt}")
-        print()
 
-    while True:
-        user_input = input("You: ").strip()
-        response = chatbot.answer(customer, user_input)
-        print(f"Agent: {response.text}\n")
-        if response.suggested_prompts:
-            print("You can also ask:")
-            for prompt in response.suggested_prompts:
+    llm_client: Optional[AzureChatClient] = None
+    conversation: List[Dict[str, str]] = []
+    system_message = _system_prompt(customer)
+
+    try:
+        model_config = find_model_config(DEFAULT_MODEL_ID)
+        llm_client = AzureChatClient(model_config)
+        conversation.append({"role": "system", "content": system_message})
+        intro_response = chatbot.intro(customer)
+        intro_prompt = _compose_intro_prompt(customer, intro_response)
+        conversation.append({"role": "user", "content": intro_prompt})
+        intro_text = llm_client.generate(conversation)
+        conversation.append({"role": "assistant", "content": intro_text})
+        print(f"\nUsing model: {DEFAULT_MODEL_ID}")
+        print(f"Agent: {intro_text}\n")
+    except (LLMConfigurationError, LLMCapabilityError, RuntimeError) as error:
+        llm_client = None
+        conversation = []
+        print(f"\n[warning] LLM unavailable ({error}). Falling back to rule-based responses.")
+        intro_response = chatbot.intro(customer)
+        print("\n" + intro_response.text + "\n")
+        if intro_response.suggested_prompts:
+            print("Try asking:")
+            for prompt in intro_response.suggested_prompts:
                 print(f"  - {prompt}")
             print()
+
+    if not conversation:
+        conversation.append({"role": "system", "content": system_message})
+
+    while True:
+        try:
+            user_input = input("You: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+
+        response = chatbot.answer(customer, user_input)
+        if user_input and llm_client:
+            conversation.append(
+                {"role": "user", "content": _compose_llm_user_message(customer, user_input, response)}
+            )
+            try:
+                llm_text = llm_client.generate(conversation)
+                conversation.append({"role": "assistant", "content": llm_text})
+                print(f"Agent: {llm_text}\n")
+            except (LLMCapabilityError, LLMConfigurationError, RuntimeError) as error:
+                print(f"[warning] LLM response failed ({error}). Using rule-based reply instead.")
+                llm_client = None
+                print(f"Agent: {response.text}\n")
+                if response.suggested_prompts:
+                    print("You can also ask:")
+                    for prompt in response.suggested_prompts:
+                        print(f"  - {prompt}")
+                    print()
+        else:
+            print(f"Agent: {response.text}\n")
+            if response.suggested_prompts:
+                print("You can also ask:")
+                for prompt in response.suggested_prompts:
+                    print(f"  - {prompt}")
+                print()
+
         if user_input.lower() in PolicyRenewalChatbot.EXIT_COMMANDS:
             break
 
