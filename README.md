@@ -33,6 +33,10 @@ The resulting JSON file contains channel recommendations and tailored communicat
    The chatbot introduces the personalized communication plan for the chosen customer and supports follow-up questions about
    benefits, renewal steps, discounts, or policy specifics sourced from the product document knowledge base.
 
+   By default the application now targets the GenAI Lab inference endpoint (`https://genailab.tcs.in`) using the shared
+   hackathon API key.  You can override the endpoint or credentials by setting the `AZURE_OPENAI_ENDPOINT` /
+   `AZURE_OPENAI_API_KEY` or `AZURE_AI_ENDPOINT` / `AZURE_AI_API_KEY` environment variables before launching the chatbot.
+
 ## Extending the Agent
 
 - Plug the playbook into local SLMs (e.g., Llama-3.2-3b-it) or Azure-hosted models for final copy polishing.

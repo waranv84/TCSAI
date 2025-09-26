@@ -48,9 +48,11 @@ class ProviderConfig:
     api_version_env: str
     default_api_version: str
     path_template: str
+    default_endpoint: Optional[str] = None
+    default_api_key: Optional[str] = None
 
     def resolve_endpoint(self) -> str:
-        endpoint = os.getenv(self.endpoint_env)
+        endpoint = os.getenv(self.endpoint_env, self.default_endpoint)
         if not endpoint:
             raise LLMConfigurationError(
                 f"Set the {self.endpoint_env} environment variable to call this model."
@@ -58,7 +60,7 @@ class ProviderConfig:
         return endpoint.rstrip("/")
 
     def resolve_key(self) -> str:
-        key = os.getenv(self.api_key_env)
+        key = os.getenv(self.api_key_env, self.default_api_key)
         if not key:
             raise LLMConfigurationError(
                 f"Set the {self.api_key_env} environment variable to call this model."
@@ -76,6 +78,8 @@ PROVIDERS: Mapping[str, ProviderConfig] = {
         api_version_env="AZURE_OPENAI_API_VERSION",
         default_api_version="2024-02-15-preview",
         path_template="/openai/deployments/{deployment}/chat/completions",
+        default_endpoint="https://genailab.tcs.in",
+        default_api_key="sk-LauROPagAqV4OtVxMbYjBw",
     ),
     "azure_ai": ProviderConfig(
         endpoint_env="AZURE_AI_ENDPOINT",
@@ -83,6 +87,8 @@ PROVIDERS: Mapping[str, ProviderConfig] = {
         api_version_env="AZURE_AI_API_VERSION",
         default_api_version="2024-05-01-preview",
         path_template="/openai/deployments/{deployment}/chat/completions",
+        default_endpoint="https://genailab.tcs.in",
+        default_api_key="sk-LauROPagAqV4OtVxMbYjBw",
     ),
 }
 
