@@ -1,0 +1,6 @@
+{
+  "Email": "Subject: Let's keep your {policy_type} active, {customer_name}!\n\nHi {customer_name},\n\nI noticed your {policy_type} is set to renew on {renewal_date}. Because you're part of our {segment} community, we've curated options that keep your premium at {premium}. {incentives}\n\nIf cost was a concern due to '{lapse_reason}', let's review flexible payment dates and see if a loyalty discount applies. {digital_support}\n\nReply to this email or use the Renewal Hub link above to complete everything in a few minutes. I'm here if you'd prefer a quick call.\n\nWarm regards,\nPolicy Renewal Team",
+  "SMS": "{customer_name}, your {policy_type} renews on {renewal_date}. {incentives} Reply YES for a quick renewal link or call us if '{lapse_reason}' is still a concern.",
+  "Phone": "Call Script:\n1. Greet {customer_name} and confirm satisfaction with {policy_type}.\n2. Acknowledge lapse reason: {lapse_reason}.\n3. Share tailored offer: {incentives}.\n4. Highlight {digital_support} for self-service.\n5. Guide through renewal before {renewal_date}.",
+  "In-App": "🔔 Renewal reminder: Your {policy_type} renews on {renewal_date}. {incentives}\nTap to explore options tailored for {segment}. We're addressing '{lapse_reason}' with flexible choices."
+}

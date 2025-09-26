@@ -1,0 +1,18 @@
+{
+  "Young Families": {
+    "incentives": "We've added a bundled child safety add-on at no extra cost and can split the premium into bi-weekly payments.",
+    "digital_support": "The mobile app now supports co-browsing so we can finalize the renewal together in minutes."
+  },
+  "Mid-Life Planners": {
+    "incentives": "Lock in your rate for the next 24 months and earn 1.5x reward points on timely payments.",
+    "digital_support": "Access a personalized dashboard comparing this year's coverage upgrades in the Renewal Hub."
+  },
+  "Pre-Retirees": {
+    "incentives": "Qualify for a 10% loyalty credit and free annual policy reviews aligned with retirement milestones.",
+    "digital_support": "Schedule a video check-in or chat with an advisor directly inside the portal."
+  },
+  "Small Business Owners": {
+    "incentives": "Bundle your business liability and workers' comp for up to 18% savings, plus priority claims handling.",
+    "digital_support": "We offer after-hours callbacks and a guided renewal workflow tailored for business owners."
+  }
+}

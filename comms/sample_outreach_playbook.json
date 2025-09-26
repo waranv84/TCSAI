@@ -1,0 +1,23 @@
+[
+  {
+    "customer_id": "CUST-00001",
+    "channel": "Email",
+    "message": "Subject: Let's keep your Home Shield active, Avery Chen!\n\nHi Avery Chen,\n\nI noticed your Home Shield is set to renew on 2025-08-25. Because you're part of our Mid-Life Planners community, we've curated options that keep your premium at $1,833.41. Lock in your rate for the next 24 months and earn 1.5x reward points on timely payments.\n\nIf cost was a concern due to 'Switched providers', let's review flexible payment dates and see if a loyalty discount applies. Access a personalized dashboard comparing this year's coverage upgrades in the Renewal Hub.\n\nReply to this email or use the Renewal Hub link above to complete everything in a few minutes. I'm here if you'd prefer a quick call.\n\nWarm regards,\nPolicy Renewal Team",
+    "churn_risk": "0.60",
+    "engagement_score": "0.22"
+  },
+  {
+    "customer_id": "CUST-00002",
+    "channel": "SMS",
+    "message": "Kai Nakamura, your Business Guard renews on 2025-09-25. Lock in your rate for the next 24 months and earn 1.5x reward points on timely payments. Reply YES for a quick renewal link or call us if 'Forgot to renew' is still a concern.",
+    "churn_risk": "0.79",
+    "engagement_score": "0.21"
+  },
+  {
+    "customer_id": "CUST-00003",
+    "channel": "Phone",
+    "message": "Call Script:\n1. Greet Emma Johnson and confirm satisfaction with Comprehensive Auto.\n2. Acknowledge lapse reason: Premium too high.\n3. Share tailored offer: Qualify for a 10% loyalty credit and free annual policy reviews aligned with retirement milestones..\n4. Highlight Schedule a video check-in or chat with an advisor directly inside the portal. for self-service.\n5. Guide through renewal before 2025-10-23.",
+    "churn_risk": "0.41",
+    "engagement_score": "0.47"
+  }
+]
