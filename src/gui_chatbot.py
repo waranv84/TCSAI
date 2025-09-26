@@ -231,7 +231,10 @@ def main() -> None:
             st.info("Session ended. Start a new session from the sidebar to continue.")
         else:
             user_prompt: Optional[str] = st.session_state.pop("pending_prompt", None)
-            user_prompt = st.chat_input("Ask about benefits, pricing, or renewal steps", key="chat_input") or user_prompt
+            user_prompt = st.chat_input(
+                "Ask about customer details, coverage, discounts, or renewal steps",
+                key="chat_input",
+            ) or user_prompt
 
             if user_prompt:
                 _append_message("user", user_prompt)
