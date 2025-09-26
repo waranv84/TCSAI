@@ -7,6 +7,8 @@ This repository contains a prototype "Policy Renewal Agent" that helps insurers 
 - `src/generate_synthetic_data.py` – script to generate synthetic customer and policy data aligned with the use case.
 - `src/policy_renewal_agent.py` – lightweight agent logic that blends segment strategies with channel-specific messaging templates.
 - `src/run_agent.py` – command-line entry point that turns a dataset into a channel-ready outreach playbook.
+- `src/policy_chatbot.py` – knowledge base and chatbot helpers that blend policy insights with customer context.
+- `src/chatbot_cli.py` – interactive chatbot experience for Q&A on renewals.
 - `configs/` – prompt templates and strategies used by the agent.
 - `data/` – synthetic datasets (generated).
 - `comms/` – personalized communication outputs produced by the agent.
@@ -23,6 +25,13 @@ This repository contains a prototype "Policy Renewal Agent" that helps insurers 
    ```
 
 The resulting JSON file contains channel recommendations and tailored communication snippets for every customer.
+
+3. **Launch the interactive renewal chatbot**:
+   ```bash
+   python src/chatbot_cli.py --customer-id CUST-00001
+   ```
+   The chatbot introduces the personalized communication plan for the chosen customer and supports follow-up questions about
+   benefits, renewal steps, discounts, or policy specifics sourced from the product document knowledge base.
 
 ## Extending the Agent
 

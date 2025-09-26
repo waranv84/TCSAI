@@ -1,0 +1,130 @@
+{
+  "Home Shield": {
+    "overview": "Home Shield protects the structure of the home, contents and liability with concierge claims support.",
+    "features": [
+      "Extended replacement coverage on the main dwelling",
+      "Smart device monitoring discount for leak and smoke sensors",
+      "One-hour emergency contractor dispatch"
+    ],
+    "benefits": [
+      "Keeps rebuild costs predictable even as materials fluctuate",
+      "Protects valuables with higher sub-limits for electronics and jewelry",
+      "Provides a single claims contact who coordinates vendors and updates"
+    ],
+    "renewal_steps": [
+      "Confirm household updates like renovations or new valuables",
+      "Select the preferred payment frequency or activate autopay",
+      "Review loyalty credit options that offset premium changes",
+      "Complete e-signature in the Renewal Hub or schedule a guided call"
+    ],
+    "support": "Our property specialists are available 24/7 at 1-800-555-0101 and inside the mobile app chat.",
+    "faqs": [
+      {
+        "question": "Does Home Shield cover water damage from burst pipes?",
+        "answer": "Yes, sudden and accidental water damage such as burst pipes is covered. Installing smart leak sensors also unlocks a preventive care discount."
+      },
+      {
+        "question": "Can I adjust the deductible at renewal?",
+        "answer": "Absolutely. During renewal you can increase or decrease your deductible to balance monthly costs with out-of-pocket preferences."
+      },
+      {
+        "question": "What happens if I file multiple claims?",
+        "answer": "Our concierge team reviews prior claims and can map out mitigation tips to keep your coverage in force without surprises."
+      }
+    ]
+  },
+  "Comprehensive Auto": {
+    "overview": "Comprehensive Auto bundles liability, collision, glass and roadside assistance for modern drivers.",
+    "features": [
+      "Accident forgiveness after three claim-free years",
+      "Same-day glass repair scheduling via the mobile app",
+      "Automatic OEM parts for vehicles under five years old"
+    ],
+    "benefits": [
+      "Keeps monthly costs level with smart telematics discounts",
+      "Minimizes downtime thanks to on-demand roadside assistance",
+      "Ensures vehicles are restored to manufacturer standards"
+    ],
+    "renewal_steps": [
+      "Update mileage and driver roster inside the app",
+      "Choose pay-in-full or installment plans with autopay reminders",
+      "Activate available safe-driver or multi-policy rewards",
+      "Confirm ID cards are delivered digitally or mailed"
+    ],
+    "support": "Roadside dispatch is available 24/7 within the app or at 1-800-555-0142.",
+    "faqs": [
+      {
+        "question": "Is rental reimbursement included?",
+        "answer": "Yes, Comprehensive Auto includes up to 30 days of rental reimbursement while covered repairs are completed."
+      },
+      {
+        "question": "How do telematics discounts work?",
+        "answer": "Enroll in the DriveAware program to earn automatic discounts for safe driving behaviors tracked through the mobile app."
+      }
+    ]
+  },
+  "LifeSecure 20": {
+    "overview": "LifeSecure 20 is a versatile term life policy with built-in wellness rewards and conversion options.",
+    "features": [
+      "Guaranteed level premiums for the entire 20-year term",
+      "Wellness reward credits that grow for completing annual screenings",
+      "Conversion privilege into permanent life coverage without new underwriting"
+    ],
+    "benefits": [
+      "Provides stable financial protection for family goals and mortgages",
+      "Rewards healthy habits with premium credits and gift cards",
+      "Gives flexibility to extend coverage when life stages change"
+    ],
+    "renewal_steps": [
+      "Confirm beneficiaries and coverage amounts reflect current goals",
+      "Upload any new wellness activities to maximize credits",
+      "Schedule a consultation to review conversion or rider options",
+      "Sign digitally or request courier pickup for paper forms"
+    ],
+    "support": "Life planning specialists can be booked for evening consultations via the portal or by calling 1-800-555-0175.",
+    "faqs": [
+      {
+        "question": "Can I increase my coverage at renewal?",
+        "answer": "Yes, you can apply for higher coverage or add riders. We'll walk through options that align with your family's goals."
+      },
+      {
+        "question": "What if I miss a premium payment?",
+        "answer": "LifeSecure 20 includes a 30-day grace period and we offer multiple reminders plus autopay to prevent lapses."
+      }
+    ]
+  },
+  "Business Guard": {
+    "overview": "Business Guard packages general liability, commercial property and cyber support for growing enterprises.",
+    "features": [
+      "Cyber incident hotline with first-response coordination",
+      "Business interruption coverage tailored to revenue streams",
+      "Equipment breakdown protection with next-day vendor dispatch"
+    ],
+    "benefits": [
+      "Protects cash flow by covering downtime and quick vendor recovery",
+      "Pairs with HR advisory services to prevent workplace incidents",
+      "Offers proactive cyber monitoring with annual security reviews"
+    ],
+    "renewal_steps": [
+      "Upload updated revenue and payroll figures",
+      "Review bundled coverage tiers for liability, property and cyber",
+      "Designate emergency contacts for our rapid response team",
+      "Finalize renewal digitally with document storage in the portal"
+    ],
+    "support": "Dedicated business specialists respond within two hours at 1-800-555-0198 or through the Business Hub chat.",
+    "faqs": [
+      {
+        "question": "Does Business Guard include cyber insurance?",
+        "answer": "Yes, it includes proactive cyber monitoring plus breach response coverage up to your selected limit."
+      },
+      {
+        "question": "Can I customize coverage for contractors?",
+        "answer": "Absolutely. We can add additional insured endorsements for contractors and partners during renewal."
+      },
+      {
+        "question": "What documentation is needed at renewal?",
+        "answer": "Upload updated financials, equipment lists and any new locations so we can confirm accurate protection levels."
+      }
+    ]
+  }
+}
