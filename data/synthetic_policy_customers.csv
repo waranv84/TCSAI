@@ -1,0 +1,51 @@
+customer_id,name,age,segment,policy_type,premium,renewal_date,last_interaction_channel,churn_risk,engagement_score,preferred_channel,lapse_reason
+CUST-00001,Avery Chen,39,Mid-Life Planners,Home Shield,1833.41,2025-08-25,Email,0.60,0.22,Email,Switched providers
+CUST-00002,Kai Nakamura,25,Mid-Life Planners,Business Guard,723.95,2025-09-25,Phone,0.79,0.21,SMS,Forgot to renew
+CUST-00003,Emma Johnson,37,Pre-Retirees,Comprehensive Auto,449.40,2025-10-23,Email,0.41,0.47,Phone,Premium too high
+CUST-00004,Kai Garcia,48,Young Families,LifeSecure 20,2033.22,2025-11-22,Phone,0.59,0.75,Email,Switched providers
+CUST-00005,Jordan O'Neal,30,Small Business Owners,LifeSecure 20,1224.83,2025-10-10,Phone,0.24,0.48,Phone,Premium too high
+CUST-00006,Kai O'Neal,34,Small Business Owners,Business Guard,830.39,2025-09-09,SMS,0.68,0.86,Email,Switched providers
+CUST-00007,Maya D'Souza,41,Young Families,Home Shield,2213.24,2025-08-05,Phone,0.28,0.59,In-App,Switched providers
+CUST-00008,Noah O'Neal,71,Pre-Retirees,Business Guard,2180.32,2025-10-03,In-App,0.41,0.98,SMS,Policy no longer needed
+CUST-00009,Jordan Patel,31,Mid-Life Planners,Home Shield,1952.97,2025-12-01,In-App,0.61,0.50,In-App,Policy no longer needed
+CUST-00010,Kai Patel,67,Young Families,LifeSecure 20,1902.49,2025-09-30,Phone,0.19,0.54,In-App,Premium too high
+CUST-00011,Kai Johnson,56,Young Families,LifeSecure 20,2059.59,2025-10-03,SMS,0.23,0.79,Email,Policy no longer needed
+CUST-00012,Ethan Patel,31,Pre-Retirees,LifeSecure 20,764.82,2025-10-18,SMS,0.85,0.94,Email,Forgot to renew
+CUST-00013,Kai Johnson,32,Small Business Owners,Home Shield,819.87,2025-08-14,In-App,0.92,0.92,SMS,Financial hardship
+CUST-00014,Maya Williams,57,Small Business Owners,Comprehensive Auto,783.00,2025-11-07,Email,0.39,0.66,SMS,Policy no longer needed
+CUST-00015,Avery Garcia,69,Young Families,Home Shield,394.91,2025-09-22,Email,0.83,0.26,SMS,Financial hardship
+CUST-00016,Liam Lopez,32,Small Business Owners,Home Shield,1936.93,2025-11-29,In-App,0.26,0.28,In-App,Financial hardship
+CUST-00017,Sofia Williams,70,Young Families,Comprehensive Auto,380.32,2025-11-13,Phone,0.78,0.29,SMS,Switched providers
+CUST-00018,Ethan Johnson,51,Mid-Life Planners,LifeSecure 20,1244.65,2025-12-12,Email,0.48,0.87,Email,Premium too high
+CUST-00019,Avery Garcia,72,Mid-Life Planners,Home Shield,1123.79,2025-12-13,In-App,0.28,0.51,Email,Switched providers
+CUST-00020,Avery D'Souza,40,Small Business Owners,LifeSecure 20,1159.47,2025-11-02,In-App,0.23,0.43,Email,Policy no longer needed
+CUST-00021,Avery Khan,27,Young Families,Business Guard,1331.13,2025-12-13,SMS,0.15,0.60,SMS,Premium too high
+CUST-00022,Liam D'Souza,31,Mid-Life Planners,Comprehensive Auto,1581.67,2025-08-14,In-App,0.66,0.64,Phone,Financial hardship
+CUST-00023,Maya O'Neal,40,Small Business Owners,Home Shield,1694.13,2025-09-18,Phone,0.49,0.92,Email,Premium too high
+CUST-00024,Zoe Nakamura,30,Young Families,Home Shield,1337.65,2025-11-22,SMS,0.89,0.89,SMS,Financial hardship
+CUST-00025,Noah Williams,58,Pre-Retirees,Comprehensive Auto,1685.91,2025-10-08,Phone,0.89,0.28,SMS,Financial hardship
+CUST-00026,Jordan Lopez,33,Pre-Retirees,LifeSecure 20,1550.38,2025-08-26,Phone,0.27,0.69,Phone,Policy no longer needed
+CUST-00027,Emma Patel,29,Small Business Owners,LifeSecure 20,344.79,2025-11-30,Phone,0.76,0.70,Phone,Switched providers
+CUST-00028,Kai D'Souza,59,Young Families,Comprehensive Auto,411.77,2025-11-18,SMS,0.56,0.85,SMS,Forgot to renew
+CUST-00029,Avery Chen,47,Young Families,LifeSecure 20,701.66,2025-08-29,SMS,0.67,0.48,In-App,Policy no longer needed
+CUST-00030,Liam Johnson,35,Small Business Owners,Comprehensive Auto,635.63,2025-09-05,Phone,0.77,0.52,SMS,Financial hardship
+CUST-00031,Jordan D'Souza,26,Small Business Owners,Home Shield,679.08,2025-09-06,In-App,0.40,0.84,SMS,Switched providers
+CUST-00032,Liam D'Souza,45,Pre-Retirees,Comprehensive Auto,2328.81,2025-08-03,Phone,0.40,0.60,Phone,Premium too high
+CUST-00033,Emma Johnson,61,Pre-Retirees,Comprehensive Auto,483.07,2025-08-26,In-App,0.39,0.81,In-App,Policy no longer needed
+CUST-00034,Jordan D'Souza,60,Mid-Life Planners,LifeSecure 20,345.43,2025-12-05,In-App,0.10,0.92,SMS,Financial hardship
+CUST-00035,Jordan Khan,63,Pre-Retirees,Comprehensive Auto,1797.47,2025-11-15,Phone,0.53,0.72,Phone,Forgot to renew
+CUST-00036,Kai Johnson,36,Small Business Owners,Business Guard,1706.23,2025-10-11,SMS,0.62,0.43,Email,Financial hardship
+CUST-00037,Liam D'Souza,61,Pre-Retirees,Business Guard,1199.84,2025-10-09,SMS,0.53,0.82,SMS,Premium too high
+CUST-00038,Kai Nakamura,45,Young Families,Home Shield,1696.51,2025-10-08,SMS,0.79,0.31,Email,Switched providers
+CUST-00039,Zoe Garcia,53,Small Business Owners,Home Shield,1794.44,2025-11-26,In-App,0.52,0.39,Email,Premium too high
+CUST-00040,Liam Johnson,68,Small Business Owners,Comprehensive Auto,1448.42,2025-11-13,Email,0.49,0.83,Phone,Forgot to renew
+CUST-00041,Sofia Lopez,52,Mid-Life Planners,Business Guard,1217.65,2025-12-04,SMS,0.81,0.42,In-App,Switched providers
+CUST-00042,Ethan Garcia,69,Pre-Retirees,Home Shield,834.19,2025-10-06,Phone,0.86,0.26,SMS,Switched providers
+CUST-00043,Noah O'Neal,28,Small Business Owners,Business Guard,961.39,2025-11-03,In-App,0.45,0.36,In-App,Forgot to renew
+CUST-00044,Avery Nakamura,48,Small Business Owners,Comprehensive Auto,2276.89,2025-12-24,Phone,0.74,0.87,In-App,Policy no longer needed
+CUST-00045,Zoe O'Neal,55,Mid-Life Planners,LifeSecure 20,1187.05,2025-12-14,Email,0.43,0.72,In-App,Switched providers
+CUST-00046,Noah Nakamura,58,Young Families,Business Guard,1522.57,2025-11-24,Email,0.17,0.53,In-App,Switched providers
+CUST-00047,Emma D'Souza,44,Mid-Life Planners,Business Guard,952.72,2025-08-09,In-App,0.34,0.94,In-App,Financial hardship
+CUST-00048,Ethan Patel,71,Young Families,LifeSecure 20,732.08,2025-08-17,Email,0.76,0.71,Email,Switched providers
+CUST-00049,Avery Nakamura,33,Mid-Life Planners,Home Shield,1268.16,2025-09-17,Email,0.58,0.37,Phone,Financial hardship
+CUST-00050,Zoe Nakamura,71,Young Families,Home Shield,2324.15,2025-09-08,Email,0.59,0.92,In-App,Forgot to renew

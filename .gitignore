@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+
+# Generated assets
+comms/outreach_playbook.json
